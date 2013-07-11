@@ -1,0 +1,9 @@
+#!/bin/bash
+cd /opt
+wget http://mirrors.neusoft.edu.cn/eclipse/jetty/stable-9/dist/jetty-distribution-9.0.4.v20130625.tar.gz
+
+chmod +x jetty-distribution-9.0.4.v20130625.tar.gz
+tar -xvf jetty-distribution-9.0.4.v20130625.tar.gz
+mv jetty-distribution-9.0.4.v20130625 jetty
+useradd jetty -U -s /bin/false
+chown -R jetty:jetty /opt/jetty

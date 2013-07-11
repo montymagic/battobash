@@ -1,0 +1,33 @@
+function myfunc()
+{
+    local  __resultvar=$1
+    local  myresult='some lue'
+    if [[ "$__resultvar" ]]; then
+        eval $__resultvar="'$myresult'"
+    else
+        echo "$myresult"
+    fi
+}
+function mygunc()
+{
+	a=$1
+	echo $1	
+	s='not'
+	if [ $a=$s ]; 
+	then
+		echo "number is one"
+#		exit
+
+	else
+		echo "number is not one"
+	fi
+
+}
+
+mygunc $1
+echo $result
+result2=$(mygunc)
+echo $result2
+
+
+

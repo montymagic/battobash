@@ -1,0 +1,15 @@
+#!/bin/bash
+if [ -z "$1" ]; then
+  echo "You need at least 1 argument"
+  exit 1
+fi
+
+if [ -z "$2" ]; then
+  echo $2 "not present"
+else
+  echo $2 "present"
+fi
+
+CMD="command something $1 -some -flags $DOMAIN"
+echo $CMD
+$CMD 

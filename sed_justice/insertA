@@ -1,0 +1,10 @@
+#!/bin/bash
+sed '/app.use(app.router);/i '
+ app.use(expressWinston.logger({
+      transports: [
+        new winston.transports.Console({
+          json: true,
+          colorize: true
+        })
+      ]
+    })); ' to.txt

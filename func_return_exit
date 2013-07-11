@@ -1,0 +1,33 @@
+#!/bin/bash
+retfunc()
+{
+    
+    if [ $1 = 0 ]; then
+    echo "this is retfunc()"
+    return 1
+    else
+ 	echo "in else of retfunc()"
+    fi
+    echo "this continues"
+
+}
+
+exitfunc()
+{
+    
+    echo "this is exitfunc()"
+    exit 1
+}
+
+retfunc $1
+
+if [ retfunc = 0 ]; then 
+#echo "We are still here"
+#exit
+echo "not o"
+else
+echo "not"
+fi
+exitfunc
+echo "We will never see this"
+
